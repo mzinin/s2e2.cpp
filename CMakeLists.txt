@@ -8,13 +8,16 @@ SET (PUBLIC_HEADERS
 )
 
 SET (HEADERS
+    "src/interface_tokenizer.hpp"
     "src/token_type.hpp"
     "src/token.hpp"
+    "src/tokenizer.hpp"
 )
 
 SET (SOURCES
     "src/error.cpp"
     "src/token.cpp"
+    "src/tokenizer.cpp"
 )
 
 ADD_LIBRARY (${PROJECT_NAME} STATIC
@@ -28,7 +31,7 @@ TARGET_INCLUDE_DIRECTORIES (${PROJECT_NAME}
 )
 
 TARGET_COMPILE_FEATURES (${PROJECT_NAME}
-    PUBLIC "cxx_std_11"
+    PUBLIC "cxx_std_17"
 )
 
 ADD_SUBDIRECTORY(3rdparty)
