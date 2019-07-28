@@ -1,4 +1,4 @@
 .vscode/
 
 build/*
-!build./git-keep
+!build/.git-keep
