@@ -2,6 +2,7 @@ SET (TARGET_NAME s2e2_tests)
 
 
 SET (SOURCES
+    "src/converter_tests.cpp"
     "src/main.cpp"
     "src/tokenizer_tests.cpp"
 )
