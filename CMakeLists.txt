@@ -8,6 +8,10 @@ INCLUDE (BuildFlags)
 INCLUDE (OutputDirs)
 
 
+SET (PUBLIC_HEADERS_DIR
+    "include/"
+)
+
 SET (PUBLIC_HEADERS
     "include/error.hpp"
     "include/function.hpp"
@@ -49,8 +53,9 @@ INSTALL (
 )
 
 INSTALL (
-    FILES ${PUBLIC_HEADERS}
+    DIRECTORY ${PUBLIC_HEADERS_DIR}
     DESTINATION ${HEADERS_OUTPUT_DIR}
+    FILES_MATCHING PATTERN "*.hpp"
 )
 
 
