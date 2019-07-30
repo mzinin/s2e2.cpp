@@ -10,6 +10,8 @@ INCLUDE (OutputDirs)
 
 SET (PUBLIC_HEADERS
     "include/error.hpp"
+    "include/function.hpp"
+    "include/functions/function_if.hpp"
 )
 
 SET (HEADERS
@@ -24,8 +26,10 @@ SET (HEADERS
 SET (SOURCES
     "src/converter.cpp"
     "src/error.cpp"
+    "src/function.cpp"
     "src/token.cpp"
     "src/tokenizer.cpp"
+    "src/functions/function_if.cpp"
 )
 
 ADD_LIBRARY (${PROJECT_NAME} STATIC
