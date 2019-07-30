@@ -15,7 +15,7 @@ TEST(FunctionIfTests, positiveTest_FirstArgumentTrue_StackSize)
 
     function.invoke(stack);
 
-    ASSERT_EQ(stack.size(), 1);
+    ASSERT_EQ(1, stack.size());
 }
 
 TEST(FunctionIfTests, positiveTest_FirstArgumentTrue_ResultType)
@@ -26,7 +26,7 @@ TEST(FunctionIfTests, positiveTest_FirstArgumentTrue_ResultType)
     function.invoke(stack);
 
     ASSERT_TRUE(stack.top().has_value());
-    ASSERT_EQ(stack.top().type(), typeid(std::string));
+    ASSERT_EQ(typeid(std::string), stack.top().type());
 }
 
 TEST(FunctionIfTests, positiveTest_FirstArgumentTrue_ResultValue)
@@ -37,7 +37,7 @@ TEST(FunctionIfTests, positiveTest_FirstArgumentTrue_ResultValue)
     function.invoke(stack);
 
     ASSERT_TRUE(stack.top().has_value());
-    ASSERT_EQ(std::any_cast<std::string>(stack.top()), std::string{"A"});
+    ASSERT_EQ(std::string{"A"}, std::any_cast<std::string>(stack.top()));
 }
 
 TEST(FunctionIfTests, positiveTest_FirstArgumentFalse_ResultValue)
@@ -48,7 +48,7 @@ TEST(FunctionIfTests, positiveTest_FirstArgumentFalse_ResultValue)
     function.invoke(stack);
 
     ASSERT_TRUE(stack.top().has_value());
-    ASSERT_EQ(std::any_cast<std::string>(stack.top()), std::string{"B"});
+    ASSERT_EQ(std::string{"B"}, std::any_cast<std::string>(stack.top()));
 }
 
 TEST(FunctionIfTests, positiveTest_MoreArguments_StackSize)
@@ -58,7 +58,7 @@ TEST(FunctionIfTests, positiveTest_MoreArguments_StackSize)
 
     function.invoke(stack);
 
-    ASSERT_EQ(stack.size(), 2);
+    ASSERT_EQ(2, stack.size());
 }
 
 TEST(FunctionIfTests, positiveTest_SecondArgumentNull_ResultValue)
@@ -93,7 +93,7 @@ TEST(FunctionIfTests, negativeTest_FewerArguments)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_EQ(e.what(), "Not enough arguments for function " + function.name);
+            ASSERT_EQ("Not enough arguments for function " + function.name, e.what());
             throw;
         }
     }, s2e2::Error);
@@ -111,7 +111,7 @@ TEST(FunctionIfTests, negativeTest_FirstArgumentWrongType)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_EQ(e.what(), "Invalid arguments for function " + function.name);
+            ASSERT_EQ("Invalid arguments for function " + function.name, e.what());
             throw;
         }
     }, s2e2::Error);
@@ -129,7 +129,7 @@ TEST(FunctionIfTests, negativeTest_FirstArgumentNull)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_EQ(e.what(), "Invalid arguments for function " + function.name);
+            ASSERT_EQ("Invalid arguments for function " + function.name, e.what());
             throw;
         }
     }, s2e2::Error);

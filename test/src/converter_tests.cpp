@@ -3,7 +3,7 @@
 #include <token_type.hpp>
 #include <token.hpp>
 
-#include <gmock/gmock.h>
+#include <gtest/gtest.h>
 
 #include <memory>
 
@@ -39,7 +39,7 @@ TEST_F(ConverterTests, positiveTest_OneBinaryOperator_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "B"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_TwoBinaryOperatorsSamePriority_ResultValue)
@@ -61,7 +61,7 @@ TEST_F(ConverterTests, positiveTest_TwoBinaryOperatorsSamePriority_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "C"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "-"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_TwoOperatorsDifferentPriorities_ResultValue)
@@ -83,7 +83,7 @@ TEST_F(ConverterTests, positiveTest_TwoOperatorsDifferentPriorities_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "*"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_UnaryOperatorAndBinaryOperator_ResultValue)
@@ -103,7 +103,7 @@ TEST_F(ConverterTests, positiveTest_UnaryOperatorAndBinaryOperator_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "B"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "!="}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_OneFunctionWithoutArguments_ResultValue)
@@ -116,7 +116,7 @@ TEST_F(ConverterTests, positiveTest_OneFunctionWithoutArguments_ResultValue)
 
     const auto expectedTokens = std::list<s2e2::Token>{s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_OneFunctionOneArgument_ResultValue)
@@ -131,7 +131,7 @@ TEST_F(ConverterTests, positiveTest_OneFunctionOneArgument_ResultValue)
     const auto expectedTokens = std::list<s2e2::Token>{s2e2::Token{s2e2::TokenType::ATOM, "Arg1"},
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_OneFunctionThreeArguments_ResultValue)
@@ -150,7 +150,7 @@ TEST_F(ConverterTests, positiveTest_OneFunctionThreeArguments_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "Arg3"},
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_FunctionAndExernalOperator_ResultValue)
@@ -175,7 +175,7 @@ TEST_F(ConverterTests, positiveTest_FunctionAndExernalOperator_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_FunctionAndInternalOperator_ResultValue)
@@ -203,7 +203,7 @@ TEST_F(ConverterTests, positiveTest_FunctionAndInternalOperator_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"},
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_NestedFunctions_ResultValue)
@@ -230,7 +230,7 @@ TEST_F(ConverterTests, positiveTest_NestedFunctions_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN3"},
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN1"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_OperatorsWithoutArguments_ResultValue)
@@ -247,7 +247,7 @@ TEST_F(ConverterTests, positiveTest_OperatorsWithoutArguments_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_FunctionWithoutCommas_ResultValue)
@@ -264,7 +264,7 @@ TEST_F(ConverterTests, positiveTest_FunctionWithoutCommas_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "Arg2"},
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, positiveTest_FunctionOfOperators_ResultValue)
@@ -283,7 +283,7 @@ TEST_F(ConverterTests, positiveTest_FunctionOfOperators_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"},
                                                        s2e2::Token{s2e2::TokenType::FUNCTION, "FUN"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(ConverterTests, negativeTest_UnpairedLeftBracket)
@@ -299,7 +299,7 @@ TEST_F(ConverterTests, negativeTest_UnpairedLeftBracket)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Converter: unpaired bracket");
+            ASSERT_STREQ("Converter: unpaired bracket", e.what());
             throw;
         }
     }, s2e2::Error);
@@ -318,7 +318,7 @@ TEST_F(ConverterTests, negativeTest_UnpairedRightBracket)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Converter: unpaired bracket");
+            ASSERT_STREQ("Converter: unpaired bracket", e.what());
             throw;
         }
     }, s2e2::Error);
@@ -335,7 +335,7 @@ TEST_F(ConverterTests, negativeTest_TwoOperatorsWithTheSameName)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Converter: operator + is already added");
+            ASSERT_STREQ("Converter: operator + is already added", e.what());
             throw;
         }
     }, s2e2::Error);
@@ -358,7 +358,7 @@ TEST_F(ConverterTests, negativeTest_UnknownOperator)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Converter: unknown operator *");
+            ASSERT_STREQ("Converter: unknown operator *", e.what());
             throw;
         }
     }, s2e2::Error);

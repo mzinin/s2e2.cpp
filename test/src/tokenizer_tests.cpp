@@ -3,7 +3,7 @@
 #include <token.hpp>
 #include <tokenizer.hpp>
 
-#include <gmock/gmock.h>
+#include <gtest/gtest.h>
 
 #include <memory>
 
@@ -36,7 +36,7 @@ TEST_F(TokenizerTests, positiveTest_OneOperatorWithSpaces_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"},
                                                        s2e2::Token{s2e2::TokenType::ATOM, "B"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_OneOperatorWithoutSpaces_ResultValue)
@@ -49,7 +49,7 @@ TEST_F(TokenizerTests, positiveTest_OneOperatorWithoutSpaces_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"},
                                                        s2e2::Token{s2e2::TokenType::ATOM, "B"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_TwoOperatorWithSpaces_ResultValue)
@@ -65,7 +65,7 @@ TEST_F(TokenizerTests, positiveTest_TwoOperatorWithSpaces_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "&&"},
                                                        s2e2::Token{s2e2::TokenType::ATOM, "C"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_TwoOperatorWithoutSpaces_ResultValue)
@@ -81,7 +81,7 @@ TEST_F(TokenizerTests, positiveTest_TwoOperatorWithoutSpaces_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "&&"},
                                                        s2e2::Token{s2e2::TokenType::ATOM, "C"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_OneOperatorIsSubstringOfAnother_ResultValue)
@@ -96,7 +96,7 @@ TEST_F(TokenizerTests, positiveTest_OneOperatorIsSubstringOfAnother_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "!"},
                                                        s2e2::Token{s2e2::TokenType::ATOM, "B"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_OneFunctionWithoutArguments_ResultValue)
@@ -109,7 +109,7 @@ TEST_F(TokenizerTests, positiveTest_OneFunctionWithoutArguments_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::LEFT_BRACKET, "("},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_OneFunctionOneArgument_ResultValue)
@@ -123,7 +123,7 @@ TEST_F(TokenizerTests, positiveTest_OneFunctionOneArgument_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "Arg1"},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_OneFunctionThreeArguments_ResultValue)
@@ -141,7 +141,7 @@ TEST_F(TokenizerTests, positiveTest_OneFunctionThreeArguments_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "Arg3"},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_TwoFunctionsOneOperator_ResultValue)
@@ -162,7 +162,7 @@ TEST_F(TokenizerTests, positiveTest_TwoFunctionsOneOperator_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::ATOM, "Arg2"},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_NestedFunctions_ResultValue)
@@ -184,7 +184,7 @@ TEST_F(TokenizerTests, positiveTest_NestedFunctions_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_NestedBrackets_ResultValue)
@@ -203,7 +203,7 @@ TEST_F(TokenizerTests, positiveTest_NestedBrackets_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_OperatorsWithoutArguments_ResultValue)
@@ -216,7 +216,7 @@ TEST_F(TokenizerTests, positiveTest_OperatorsWithoutArguments_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"},
                                                        s2e2::Token{s2e2::TokenType::OPERATOR, "+"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, positiveTest_UnpairedBrackets_ResultValue)
@@ -228,7 +228,7 @@ TEST_F(TokenizerTests, positiveTest_UnpairedBrackets_ResultValue)
                                                        s2e2::Token{s2e2::TokenType::LEFT_BRACKET, "("},
                                                        s2e2::Token{s2e2::TokenType::RIGHT_BRACKET, ")"}};
 
-    ASSERT_EQ(actualTokens, expectedTokens);
+    ASSERT_EQ(expectedTokens, actualTokens);
 }
 
 TEST_F(TokenizerTests, negativeTest_TwoOperatorsWithTheSameName)
@@ -242,7 +242,7 @@ TEST_F(TokenizerTests, negativeTest_TwoOperatorsWithTheSameName)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Tokenizer: operator + is already added");
+            ASSERT_STREQ("Tokenizer: operator + is already added", e.what());
             throw;
         }
     }, s2e2::Error);
@@ -259,7 +259,7 @@ TEST_F(TokenizerTests, negativeTest_TwoFunctionsWithTheSameName)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Tokenizer: function FUN is already added");
+            ASSERT_STREQ("Tokenizer: function FUN is already added", e.what());
             throw;
         }
     }, s2e2::Error);
@@ -276,7 +276,7 @@ TEST_F(TokenizerTests, negativeTest_FunctionAndOperatorWithTheSameName)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Tokenizer: function FF is already added");
+            ASSERT_STREQ("Tokenizer: function FF is already added", e.what());
             throw;
         }
     }, s2e2::Error);
@@ -293,7 +293,7 @@ TEST_F(TokenizerTests, negativeTest_OperatorAndFunctionWithTheSameName)
         }
         catch (const s2e2::Error& e)
         {
-            EXPECT_STREQ(e.what(), "Tokenizer: operator FF is already added");
+            ASSERT_STREQ("Tokenizer: operator FF is already added", e.what());
             throw;
         }
     }, s2e2::Error);
