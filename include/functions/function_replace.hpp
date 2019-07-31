@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class FunctionIf
-     * @brief Function IF(<conition>, <value1>, <value2>)
-     * @details Returns value1 if boolean condition is true, and value2 otherwise.
+     * @class FunctionReplace
+     * @brief Function REPLACE(<source>, <regex>, <replacement>)
+     * @details Returns copy of source with all matches of regex replaced by replacement.
      */
-    class FunctionIf final : public Function
+    class FunctionReplace final : public Function
     {
     public:
         /**
          * Default constructor.
          */
-        FunctionIf();
+        FunctionReplace();
 
     private:
         /**

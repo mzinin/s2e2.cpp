@@ -16,6 +16,7 @@ SET (PUBLIC_HEADERS
     "include/error.hpp"
     "include/function.hpp"
     "include/functions/function_if.hpp"
+    "include/functions/function_replace.hpp"
 )
 
 SET (HEADERS
@@ -34,6 +35,7 @@ SET (SOURCES
     "src/token.cpp"
     "src/tokenizer.cpp"
     "src/functions/function_if.cpp"
+    "src/functions/function_replace.cpp"
 )
 
 ADD_LIBRARY (${PROJECT_NAME} STATIC
