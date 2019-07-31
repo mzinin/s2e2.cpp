@@ -10,6 +10,7 @@ SET (SOURCES
     "src/main.cpp"
     "src/tokenizer_tests.cpp"
     "src/functions/function_if_tests.cpp"
+    "src/functions/function_replace_tests.cpp"
 )
 
 ADD_EXECUTABLE (${TARGET_NAME}
