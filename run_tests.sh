@@ -24,4 +24,4 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 BUILD_SUB_DIR=$(echo "$BUILD_TYPE" | awk '{print tolower($0)}')
 TESTS_DIR="${SCRIPT_DIR}/build/output/${BUILD_SUB_DIR}/test"
 
-"${TESTS_DIR}/s2e2_tests"
+"${TESTS_DIR}/s2e2_tests" --gtest_shuffle
