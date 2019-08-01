@@ -2,22 +2,13 @@
 
 #include <error.hpp>
 #include <functions/function_now.hpp>
+#include <utils.hpp>
 
 #include <gtest/gtest.h>
 
 #include <ctime>
 #include <typeinfo>
 
-
-namespace
-{
-    std::time_t utcTs(std::tm* tm) 
-    {
-        const auto localTs = mktime(tm);
-        const auto localToUTcDiff = std::mktime(std::localtime(&localTs)) - std::mktime(std::gmtime(&localTs));
-        return localTs + localToUTcDiff;
-    }
-}
 
 TEST(FunctionNowTests, positiveTest_StackSize)
 {
@@ -55,7 +46,7 @@ TEST(FunctionNowTests, positiveTest_ResultValue)
     auto functionResult = std::any_cast<std::tm>(stack.top());
     ASSERT_EQ(0, functionResult.tm_isdst);
 
-    const auto functionTs = utcTs(&functionResult);
+    const auto functionTs = s2e2::utcTs(&functionResult);
     const auto actualDifference = std::difftime(now, functionTs);
 
     ASSERT_GE(actualDifference, 0.0);

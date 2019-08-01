@@ -15,6 +15,7 @@ SET (PUBLIC_HEADERS_DIR
 SET (PUBLIC_HEADERS
     "include/error.hpp"
     "include/function.hpp"
+    "include/functions/function_add_days.hpp"
     "include/functions/function_if.hpp"
     "include/functions/function_now.hpp"
     "include/functions/function_replace.hpp"
@@ -27,6 +28,7 @@ SET (HEADERS
     "src/token_type.hpp"
     "src/token.hpp"
     "src/tokenizer.hpp"
+    "src/utils.hpp"
 )
 
 SET (SOURCES
@@ -35,6 +37,8 @@ SET (SOURCES
     "src/function.cpp"
     "src/token.cpp"
     "src/tokenizer.cpp"
+    "src/utils.cpp"
+    "src/functions/function_add_days.cpp"
     "src/functions/function_if.cpp"
     "src/functions/function_now.cpp"
     "src/functions/function_replace.cpp"
