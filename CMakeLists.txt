@@ -16,6 +16,7 @@ SET (PUBLIC_HEADERS
     "include/error.hpp"
     "include/function.hpp"
     "include/functions/function_if.hpp"
+    "include/functions/function_now.hpp"
     "include/functions/function_replace.hpp"
 )
 
@@ -35,6 +36,7 @@ SET (SOURCES
     "src/token.cpp"
     "src/tokenizer.cpp"
     "src/functions/function_if.cpp"
+    "src/functions/function_now.cpp"
     "src/functions/function_replace.cpp"
 )
 
