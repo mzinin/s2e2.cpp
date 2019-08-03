@@ -15,11 +15,13 @@ SET (PUBLIC_HEADERS_DIR
 SET (PUBLIC_HEADERS
     "include/error.hpp"
     "include/function.hpp"
+    "include/operator.hpp"
     "include/functions/function_add_days.hpp"
     "include/functions/function_format_date.hpp"
     "include/functions/function_if.hpp"
     "include/functions/function_now.hpp"
     "include/functions/function_replace.hpp"
+    "include/operators/operator_and.hpp"
 )
 
 SET (HEADERS
@@ -30,12 +32,14 @@ SET (HEADERS
     "src/token.hpp"
     "src/tokenizer.hpp"
     "src/utils.hpp"
+    "src/operators/priorities.hpp"
 )
 
 SET (SOURCES
     "src/converter.cpp"
     "src/error.cpp"
     "src/function.cpp"
+    "src/operator.cpp"
     "src/token.cpp"
     "src/tokenizer.cpp"
     "src/utils.cpp"
@@ -44,6 +48,7 @@ SET (SOURCES
     "src/functions/function_if.cpp"
     "src/functions/function_now.cpp"
     "src/functions/function_replace.cpp"
+    "src/operators/operator_and.cpp"
 )
 
 ADD_LIBRARY (${PROJECT_NAME} STATIC
