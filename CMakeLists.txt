@@ -22,6 +22,7 @@ SET (PUBLIC_HEADERS
     "include/functions/function_now.hpp"
     "include/functions/function_replace.hpp"
     "include/operators/operator_and.hpp"
+    "include/operators/operator_not.hpp"
     "include/operators/operator_or.hpp"
 )
 
@@ -50,6 +51,7 @@ SET (SOURCES
     "src/functions/function_now.cpp"
     "src/functions/function_replace.cpp"
     "src/operators/operator_and.cpp"
+    "src/operators/operator_not.cpp"
     "src/operators/operator_or.cpp"
 )
 
