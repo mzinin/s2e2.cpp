@@ -46,7 +46,7 @@ namespace s2e2
         virtual bool checkArguments() const = 0;
 
         /**
-         * @brief Calculate result of the function.
+         * @brief Calculate result of the operator.
          * @return Result.
          */
         virtual std::any result() const = 0;

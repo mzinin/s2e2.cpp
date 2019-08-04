@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class OperatorAnd
-     * @brief Operator &&
-     * @details Computes conjunction of two boolean values.
+     * @class OperatorEqual
+     * @brief Operator ==
+     * @details Compares two strings.
      */
-    class OperatorAnd final : public Operator
+    class OperatorEqual final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        OperatorAnd();
+        OperatorEqual();
 
     private:
         /**

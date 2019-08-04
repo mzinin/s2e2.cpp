@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the function.
+         * @brief Calculate result of the operator.
          * @return Result.
          */
         std::any result() const override;
