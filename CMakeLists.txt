@@ -24,6 +24,7 @@ SET (PUBLIC_HEADERS
     "include/operators/operator_and.hpp"
     "include/operators/operator_equal.hpp"
     "include/operators/operator_not.hpp"
+    "include/operators/operator_not_equal.hpp"
     "include/operators/operator_or.hpp"
     "include/operators/operator_plus.hpp"
 )
@@ -55,6 +56,7 @@ SET (SOURCES
     "src/operators/operator_and.cpp"
     "src/operators/operator_equal.cpp"
     "src/operators/operator_not.cpp"
+    "src/operators/operator_not_equal.cpp"
     "src/operators/operator_or.cpp"
     "src/operators/operator_plus.cpp"
 )
