@@ -17,6 +17,7 @@ SET (SOURCES
     "src/operators/operator_and_tests.cpp"
     "src/operators/operator_not_tests.cpp"
     "src/operators/operator_or_tests.cpp"
+    "src/operators/operator_plus_tests.cpp"
 )
 
 ADD_EXECUTABLE (${TARGET_NAME}
