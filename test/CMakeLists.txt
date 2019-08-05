@@ -16,6 +16,7 @@ SET (SOURCES
     "src/functions/function_replace_tests.cpp"
     "src/operators/operator_and_tests.cpp"
     "src/operators/operator_equal_tests.cpp"
+    "src/operators/operator_greater_or_equal_tests.cpp"
     "src/operators/operator_greater_tests.cpp"
     "src/operators/operator_not_tests.cpp"
     "src/operators/operator_not_equal_tests.cpp"
