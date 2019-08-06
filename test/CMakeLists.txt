@@ -18,6 +18,7 @@ SET (SOURCES
     "src/operators/operator_equal_tests.cpp"
     "src/operators/operator_greater_or_equal_tests.cpp"
     "src/operators/operator_greater_tests.cpp"
+    "src/operators/operator_less_tests.cpp"
     "src/operators/operator_not_tests.cpp"
     "src/operators/operator_not_equal_tests.cpp"
     "src/operators/operator_or_tests.cpp"
