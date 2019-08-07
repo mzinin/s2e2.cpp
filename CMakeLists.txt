@@ -14,6 +14,7 @@ SET (PUBLIC_HEADERS_DIR
 
 SET (PUBLIC_HEADERS
     "include/error.hpp"
+    "include/evaluator.hpp"
     "include/function.hpp"
     "include/operator.hpp"
     "include/functions/function_add_days.hpp"
@@ -35,6 +36,7 @@ SET (PUBLIC_HEADERS
 
 SET (HEADERS
     "src/converter.hpp"
+    "src/evaluator_impl.hpp"
     "src/interface_converter.hpp"
     "src/interface_tokenizer.hpp"
     "src/token_type.hpp"
@@ -47,6 +49,8 @@ SET (HEADERS
 SET (SOURCES
     "src/converter.cpp"
     "src/error.cpp"
+    "src/evaluator_impl.cpp"
+    "src/evaluator.cpp"
     "src/function.cpp"
     "src/operator.cpp"
     "src/token.cpp"
