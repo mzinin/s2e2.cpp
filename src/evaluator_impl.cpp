@@ -106,9 +106,9 @@ void s2e2::EvaluatorImpl::addStandardOperators()
 std::unordered_set<const s2e2::Function*> s2e2::EvaluatorImpl::getFunctions() const
 {
     std::unordered_set<const Function*> result(functions_.bucket_count());
-    for (const auto& [name, fn] : functions_)
+    for (const auto& pair : functions_)
     {
-        result.insert(fn.get());
+        result.insert(pair.second.get());
     }
     return result;
 }
@@ -116,9 +116,9 @@ std::unordered_set<const s2e2::Function*> s2e2::EvaluatorImpl::getFunctions() co
 std::unordered_set<const s2e2::Operator*> s2e2::EvaluatorImpl::getOperators() const
 {
     std::unordered_set<const Operator*> result(operators_.bucket_count());
-    for (const auto& [name, op] : operators_)
+    for (const auto& pair : operators_)
     {
-        result.insert(op.get());
+        result.insert(pair.second.get());
     }
     return result;
 }
