@@ -7,6 +7,7 @@ SET (HEADERS
 
 SET (SOURCES
     "src/converter_tests.cpp"
+    "src/evaluator_tests.cpp"
     "src/main.cpp"
     "src/tokenizer_tests.cpp"
     "src/functions/function_add_days_tests.cpp"
