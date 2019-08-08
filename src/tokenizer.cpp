@@ -157,7 +157,7 @@ namespace // anonymous
                 break;
 
             default:
-                throw s2e2::Error("Unexpected special symbol " + symbol);
+                throw s2e2::Error("Tokenizer: unexpected special symbol " + symbol);
             }
         }
 
