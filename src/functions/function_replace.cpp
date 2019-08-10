@@ -46,10 +46,10 @@ std::any s2e2::FunctionReplace::result() const
         return std::any{};
     }
 
-    const auto source = std::any_cast<std::string>(std::move(arguments_[0]));
-    const auto regex = std::regex(std::any_cast<std::string>(std::move(arguments_[1])), std::regex_constants::extended);
-    const auto replacement = std::any_cast<std::string>(std::move(arguments_[2]));
+    const auto* source = std::any_cast<std::string>(&arguments_[0]);
+    const auto regex = std::regex(*std::any_cast<std::string>(&arguments_[1]), std::regex_constants::extended);
+    const auto* replacement = std::any_cast<std::string>(&arguments_[2]);
 
-    auto result = std::regex_replace(source, regex, replacement);
+    auto result = std::regex_replace(*source, regex, *replacement);
     return std::any{std::move(result)};
 }

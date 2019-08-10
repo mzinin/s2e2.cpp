@@ -29,5 +29,5 @@ std::any s2e2::OperatorNotEqual::result() const
         return {arguments_[0].has_value()};
     }
 
-    return {std::any_cast<std::string>(arguments_[0]) != std::any_cast<std::string>(arguments_[1])};
+    return {*std::any_cast<std::string>(&arguments_[0]) != *std::any_cast<std::string>(&arguments_[1])};
 }

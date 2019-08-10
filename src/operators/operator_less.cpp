@@ -20,5 +20,5 @@ bool s2e2::OperatorLess::checkArguments() const
 
 std::any s2e2::OperatorLess::result() const
 {
-    return {std::any_cast<std::string>(arguments_[0]) < std::any_cast<std::string>(arguments_[1])};
+    return {*std::any_cast<std::string>(&arguments_[0]) < *std::any_cast<std::string>(&arguments_[1])};
 }

@@ -28,11 +28,11 @@ std::any s2e2::OperatorPlus::result() const
     std::string result;
     if (arguments_[0].has_value())
     {
-        result += std::any_cast<std::string>(arguments_[0]);
+        result += *std::any_cast<std::string>(&arguments_[0]);
     }
     if (arguments_[1].has_value())
     {
-        result += std::any_cast<std::string>(arguments_[1]);
+        result += *std::any_cast<std::string>(&arguments_[1]);
     }
     return result;
 }

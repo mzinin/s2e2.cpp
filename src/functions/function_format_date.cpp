@@ -36,12 +36,12 @@ bool s2e2::FunctionFormatDate::checkArguments() const
 
 std::any s2e2::FunctionFormatDate::result() const
 {
-    const auto datetime = std::any_cast<std::tm>( arguments_[0]);
-    const auto format = std::any_cast<std::string>(arguments_[1]);
+    const auto* datetime = std::any_cast<std::tm>(&arguments_[0]);
+    const auto* format = std::any_cast<std::string>(&arguments_[1]);
 
     thread_local char buffer[256];
 
-    if (std::strftime(buffer, sizeof(buffer), format.c_str(), &datetime) == 0)
+    if (std::strftime(buffer, sizeof(buffer), format->c_str(), datetime) == 0)
     {
         return std::any{};
     }

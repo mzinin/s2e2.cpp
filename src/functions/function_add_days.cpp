@@ -33,7 +33,7 @@ bool s2e2::FunctionAddDays::checkArguments() const
 
     try
     {
-        std::stoi(std::any_cast<std::string>(arguments_[1]));
+        std::stoi(*std::any_cast<std::string>(&arguments_[1]));
     }
     catch (const std::exception&)
     {
@@ -45,8 +45,8 @@ bool s2e2::FunctionAddDays::checkArguments() const
 
 std::any s2e2::FunctionAddDays::result() const
 {
-    auto datetime = std::any_cast<std::tm>( arguments_[0]);
-    const auto days = std::stoi(std::any_cast<std::string>(arguments_[1]));
+    auto datetime = std::any_cast<std::tm>(arguments_[0]);
+    const auto days = std::stoi(*std::any_cast<std::string>(&arguments_[1]));
 
     datetime.tm_mday += days;
     const auto newTs = utcTs(&datetime);
