@@ -157,7 +157,7 @@ namespace // anonymous
                 break;
 
             default:
-                throw s2e2::Error("Tokenizer: unexpected special symbol " + symbol);
+                throw s2e2::Error(std::string{"Tokenizer: unexpected special symbol "} + symbol);
             }
         }
 
