@@ -1,6 +1,6 @@
 #pragma once
 
-#include <function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class FunctionNow
-     * @brief Function NOW()
-     * @details Returns current UTC datetime.
+     * @class OperatorOr
+     * @brief Operator ||
+     * @details Computes disjunction of two boolean values.
      */
-    class FunctionNow final : public Function
+    class OperatorOr final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        FunctionNow();
+        OperatorOr();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the function.
+         * @brief Calculate result of the operator.
          * @return Result.
          */
         std::any result() const override;

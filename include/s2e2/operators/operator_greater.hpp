@@ -1,6 +1,6 @@
 #pragma once
 
-#include <function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class FunctionFormatDate
-     * @brief Function FORMAT_DATE(<datetime>, <format>)
-     * @details Converts datetime to string according to format.
+     * @class OperatorGreater
+     * @brief Operator >
+     * @details Lexicographically compares two strings.
      */
-    class FunctionFormatDate final : public Function
+    class OperatorGreater final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        FunctionFormatDate();
+        OperatorGreater();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the function.
+         * @brief Calculate result of the operator.
          * @return Result.
          */
         std::any result() const override;

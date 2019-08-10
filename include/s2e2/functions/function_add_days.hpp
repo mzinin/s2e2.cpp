@@ -1,6 +1,6 @@
 #pragma once
 
-#include <operator.hpp>
+#include <s2e2/function.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class OperatorNotEqual
-     * @brief Operator !=
-     * @details Compares two strings.
+     * @class FunctionAddDays
+     * @brief Function ADD_DAYS(<datetime>, <days>)
+     * @details Adds number of days to datetime.
      */
-    class OperatorNotEqual final : public Operator
+    class FunctionAddDays final : public Function
     {
     public:
         /**
          * Default constructor.
          */
-        OperatorNotEqual();
+        FunctionAddDays();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the operator.
+         * @brief Calculate result of the function.
          * @return Result.
          */
         std::any result() const override;

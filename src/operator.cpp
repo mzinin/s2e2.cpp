@@ -1,5 +1,5 @@
-#include <error.hpp>
-#include <operator.hpp>
+#include <s2e2/error.hpp>
+#include <s2e2/operator.hpp>
 
 
 void s2e2::Operator::invoke(std::stack<std::any>& stack) const

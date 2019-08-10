@@ -1,7 +1,7 @@
 #pragma once
 
-#include <function.hpp>
-#include <operator.hpp>
+#include <s2e2/function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <memory>
 #include <optional>
@@ -22,6 +22,11 @@ namespace s2e2
          * @brief Default constructor.
          */
         Evaluator();
+
+        /**
+         * @brief Destructor.
+         */
+        ~Evaluator();
 
         /**
          * @brief Add function to set of supported functions.

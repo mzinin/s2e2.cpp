@@ -1,6 +1,6 @@
 #pragma once
 
-#include <function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class FunctionIf
-     * @brief Function IF(<conition>, <value1>, <value2>)
-     * @details Returns value1 if boolean condition is true, and value2 otherwise.
+     * @class OperatorLessOrEqual
+     * @brief Operator <=
+     * @details Lexicographically compares two strings.
      */
-    class FunctionIf final : public Function
+    class OperatorLessOrEqual final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        FunctionIf();
+        OperatorLessOrEqual();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the function.
+         * @brief Calculate result of the operator.
          * @return Result.
          */
         std::any result() const override;

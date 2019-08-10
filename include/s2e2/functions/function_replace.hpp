@@ -1,6 +1,6 @@
 #pragma once
 
-#include <function.hpp>
+#include <s2e2/function.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class FunctionAddDays
-     * @brief Function ADD_DAYS(<datetime>, <days>)
-     * @details Adds number of days to datetime.
+     * @class FunctionReplace
+     * @brief Function REPLACE(<source>, <regex>, <replacement>)
+     * @details Returns copy of source with all matches of regex replaced by replacement.
      */
-    class FunctionAddDays final : public Function
+    class FunctionReplace final : public Function
     {
     public:
         /**
          * Default constructor.
          */
-        FunctionAddDays();
+        FunctionReplace();
 
     private:
         /**

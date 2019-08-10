@@ -1,6 +1,6 @@
 #include "priorities.hpp"
 
-#include <operators/operator_not_equal.hpp>
+#include <s2e2/operators/operator_not_equal.hpp>
 
 #include <typeinfo>
 

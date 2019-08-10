@@ -1,6 +1,6 @@
 #pragma once
 
-#include <operator.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class OperatorAnd
-     * @brief Operator &&
-     * @details Computes conjunction of two boolean values.
+     * @class OperatorGreaterOrEqual
+     * @brief Operator >=
+     * @details Lexicographically compares two strings.
      */
-    class OperatorAnd final : public Operator
+    class OperatorGreaterOrEqual final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        OperatorAnd();
+        OperatorGreaterOrEqual();
 
     private:
         /**

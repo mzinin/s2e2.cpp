@@ -1,7 +1,8 @@
-#include <error.hpp>
 #include <token_type.hpp>
 #include <token.hpp>
 #include <tokenizer.hpp>
+
+#include <s2e2/error.hpp>
 
 #include <gtest/gtest.h>
 

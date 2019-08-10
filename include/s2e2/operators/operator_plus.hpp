@@ -1,6 +1,6 @@
 #pragma once
 
-#include <operator.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class OperatorLess
-     * @brief Operator <
-     * @details Lexicographically compares two strings.
+     * @class OperatorPlus
+     * @brief Operator +
+     * @details Concatenates two strings.
      */
-    class OperatorLess final : public Operator
+    class OperatorPlus final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        OperatorLess();
+        OperatorPlus();
 
     private:
         /**

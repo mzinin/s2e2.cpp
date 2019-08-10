@@ -1,7 +1,7 @@
 #include "../test_utils.hpp"
 
-#include <error.hpp>
-#include <operators/operator_less_or_equal.hpp>
+#include <s2e2/error.hpp>
+#include <s2e2/operators/operator_less_or_equal.hpp>
 
 #include <gtest/gtest.h>
 

@@ -1,7 +1,7 @@
 #include "../test_utils.hpp"
 
-#include <error.hpp>
-#include <functions/function_if.hpp>
+#include <s2e2/error.hpp>
+#include <s2e2/functions/function_if.hpp>
 
 #include <gtest/gtest.h>
 

@@ -1,4 +1,4 @@
-#include <error.hpp>
+#include <s2e2/error.hpp>
 
 
 s2e2::Error::Error(const std::string& message)

@@ -1,6 +1,6 @@
 #include "tokenizer.hpp"
 
-#include <error.hpp>
+#include <s2e2/error.hpp>
 
 #include <algorithm> 
 #include <cctype>

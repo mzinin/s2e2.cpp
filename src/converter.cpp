@@ -1,6 +1,6 @@
 #include "converter.hpp"
 
-#include <error.hpp>
+#include <s2e2/error.hpp>
 
 
 namespace // anonymous

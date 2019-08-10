@@ -1,12 +1,13 @@
 #include "converter_mock.hpp"
 #include "tokenizer_mock.hpp"
 
-#include <error.hpp>
 #include <evaluator_impl.hpp>
-#include <function.hpp>
-#include <operator.hpp>
 #include <token_type.hpp>
 #include <token.hpp>
+
+#include <s2e2/error.hpp>
+#include <s2e2/function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <gtest/gtest.h>
 

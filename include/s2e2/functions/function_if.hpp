@@ -1,6 +1,6 @@
 #pragma once
 
-#include <operator.hpp>
+#include <s2e2/function.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class OperatorOr
-     * @brief Operator ||
-     * @details Computes disjunction of two boolean values.
+     * @class FunctionIf
+     * @brief Function IF(<conition>, <value1>, <value2>)
+     * @details Returns value1 if boolean condition is true, and value2 otherwise.
      */
-    class OperatorOr final : public Operator
+    class FunctionIf final : public Function
     {
     public:
         /**
          * Default constructor.
          */
-        OperatorOr();
+        FunctionIf();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the operator.
+         * @brief Calculate result of the function.
          * @return Result.
          */
         std::any result() const override;

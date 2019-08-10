@@ -1,6 +1,6 @@
 #pragma once
 
-#include <operator.hpp>
+#include <s2e2/function.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class OperatorLessOrEqual
-     * @brief Operator <=
-     * @details Lexicographically compares two strings.
+     * @class FunctionNow
+     * @brief Function NOW()
+     * @details Returns current UTC datetime.
      */
-    class OperatorLessOrEqual final : public Operator
+    class FunctionNow final : public Function
     {
     public:
         /**
          * Default constructor.
          */
-        OperatorLessOrEqual();
+        FunctionNow();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the operator.
+         * @brief Calculate result of the function.
          * @return Result.
          */
         std::any result() const override;

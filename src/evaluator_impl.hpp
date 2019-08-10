@@ -4,9 +4,8 @@
 #include "interface_tokenizer.hpp"
 #include "token.hpp"
 
-#include <evaluator.hpp>
-#include <function.hpp>
-#include <operator.hpp>
+#include <s2e2/function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 #include <list>

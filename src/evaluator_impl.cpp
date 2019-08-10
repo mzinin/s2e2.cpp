@@ -4,24 +4,24 @@
 #include "token.hpp"
 #include "tokenizer.hpp"
 
-#include <error.hpp>
+#include <s2e2/error.hpp>
 
-#include <functions/function_add_days.hpp>
-#include <functions/function_format_date.hpp>
-#include <functions/function_if.hpp>
-#include <functions/function_now.hpp>
-#include <functions/function_replace.hpp>
+#include <s2e2/functions/function_add_days.hpp>
+#include <s2e2/functions/function_format_date.hpp>
+#include <s2e2/functions/function_if.hpp>
+#include <s2e2/functions/function_now.hpp>
+#include <s2e2/functions/function_replace.hpp>
 
-#include <operators/operator_and.hpp>
-#include <operators/operator_equal.hpp>
-#include <operators/operator_greater_or_equal.hpp>
-#include <operators/operator_greater.hpp>
-#include <operators/operator_less_or_equal.hpp>
-#include <operators/operator_less.hpp>
-#include <operators/operator_not_equal.hpp>
-#include <operators/operator_not.hpp>
-#include <operators/operator_or.hpp>
-#include <operators/operator_plus.hpp>
+#include <s2e2/operators/operator_and.hpp>
+#include <s2e2/operators/operator_equal.hpp>
+#include <s2e2/operators/operator_greater_or_equal.hpp>
+#include <s2e2/operators/operator_greater.hpp>
+#include <s2e2/operators/operator_less_or_equal.hpp>
+#include <s2e2/operators/operator_less.hpp>
+#include <s2e2/operators/operator_not_equal.hpp>
+#include <s2e2/operators/operator_not.hpp>
+#include <s2e2/operators/operator_or.hpp>
+#include <s2e2/operators/operator_plus.hpp>
 
 #include <algorithm>
 #include <stdexcept>

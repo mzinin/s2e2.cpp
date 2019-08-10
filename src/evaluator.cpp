@@ -1,6 +1,6 @@
 #include "evaluator_impl.hpp"
 
-#include <evaluator.hpp>
+#include <s2e2/evaluator.hpp>
 
 /**
  * @class Evaluator::Impl
@@ -17,6 +17,8 @@ s2e2::Evaluator::Evaluator()
     : pimpl_{std::make_unique<Impl>()}
 {
 }
+
+s2e2::Evaluator::~Evaluator() = default;
 
 void s2e2::Evaluator::addFunction(std::unique_ptr<Function>&& fn)
 {

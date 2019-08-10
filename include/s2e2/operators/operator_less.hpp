@@ -1,6 +1,6 @@
 #pragma once
 
-#include <function.hpp>
+#include <s2e2/operator.hpp>
 
 #include <any>
 
@@ -8,17 +8,17 @@
 namespace s2e2
 {
     /**
-     * @class FunctionReplace
-     * @brief Function REPLACE(<source>, <regex>, <replacement>)
-     * @details Returns copy of source with all matches of regex replaced by replacement.
+     * @class OperatorLess
+     * @brief Operator <
+     * @details Lexicographically compares two strings.
      */
-    class FunctionReplace final : public Function
+    class OperatorLess final : public Operator
     {
     public:
         /**
          * Default constructor.
          */
-        FunctionReplace();
+        OperatorLess();
 
     private:
         /**
@@ -28,7 +28,7 @@ namespace s2e2
         bool checkArguments() const override;
 
         /**
-         * @brief Calculate result of the function.
+         * @brief Calculate result of the operator.
          * @return Result.
          */
         std::any result() const override;
