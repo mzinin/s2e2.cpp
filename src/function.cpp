@@ -9,7 +9,7 @@ void s2e2::Function::invoke(std::stack<std::any>& stack) const
         throw Error("Not enough arguments for function " + name);
     }
 
-    for (int i = arguments_.size() - 1; i >= 0; --i)
+    for (int i = static_cast<int>(arguments_.size() - 1); i >= 0; --i)
     {
         arguments_[i] = std::move(stack.top());
         stack.pop();

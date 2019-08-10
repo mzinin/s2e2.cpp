@@ -193,7 +193,7 @@ void s2e2::EvaluatorImpl::processOperator(const Token& token) const
         const auto& op = operators_.at(token.value);
         op->invoke(stack_);
     }
-    catch (const std::out_of_range& e)
+    catch (const std::out_of_range&)
     {
         throw Error("Evaluator: unsupported operator " + token.value);
     }
@@ -206,7 +206,7 @@ void s2e2::EvaluatorImpl::processFunction(const Token& token) const
         const auto& fn = functions_.at(token.value);
         fn->invoke(stack_);
     }
-    catch (const std::out_of_range& e)
+    catch (const std::out_of_range&)
     {
         throw Error("Evaluator: unsupported function " + token.value);
     }

@@ -47,7 +47,7 @@ std::any s2e2::FunctionReplace::result() const
     }
 
     const auto* source = std::any_cast<std::string>(&arguments_[0]);
-    const auto regex = std::regex(*std::any_cast<std::string>(&arguments_[1]), std::regex_constants::extended);
+    const auto regex = std::regex(*std::any_cast<std::string>(&arguments_[1]));
     const auto* replacement = std::any_cast<std::string>(&arguments_[2]);
 
     auto result = std::regex_replace(*source, regex, *replacement);
