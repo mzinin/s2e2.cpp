@@ -22,7 +22,7 @@ namespace s2e2
         virtual ~Operator() = default;
 
         /**
-         * @brief Invoke the function - pop all its arguments from the stack and put result in.
+         * @brief Invoke the operator - pop all its arguments from the stack and put result in.
          * @param stack[in, out] - Stack with arguments.
          * @throws Error in case of wrong number or types of arguments.
          */

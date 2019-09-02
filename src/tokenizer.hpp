@@ -22,7 +22,7 @@ namespace s2e2
         /**
          * @brief Add function expected within expression.
          * @param[in] functionName - Function's name.
-         * @throws Error if functons's name is not unique.
+         * @throws Error if functions's name is not unique.
          */
         void addFunction(const std::string& functionName) override;
 
