@@ -118,7 +118,7 @@ namespace s2e2
         /**
          * @brief Process FUNCTION token.
          * @param[in] token - FUNCTION token.
-         * @throws Error in case of unsupported function..
+         * @throws Error in case of unsupported function.
          */
         void processFunction(const Token& token) const;
 
