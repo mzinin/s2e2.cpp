@@ -1,4 +1,4 @@
-# s2e2.java
+# s2e2.cpp
 
 This library provides C++ implementation of Simple String Expression Evaluator a.k.a. `s2e2`. The Evaluator returns value of an input expression. Unlike commonly known mathematical expression evaluators this one treats all parts of the expression as strings and its output value is also a string.
 
@@ -32,7 +32,7 @@ For example:
 
 ## Constants
 
-There is only one predefined constant - `NULL` - which corresponds to an `NULL` value in Java. It can be used to check if some sub-expression is evaluated into some result: `IF(SUBEXPR(Arg1, Arg2) == NULL, NULL, Value)`
+There is only one predefined constant - `NULL` - which corresponds to an absent value. It can be used to check if some sub-expression is evaluated into some result: `IF(SUBEXPR(Arg1, Arg2) == NULL, NULL, Value)`
 
 
 ## Functions
@@ -96,7 +96,7 @@ private:
     const std::unordered_set<std::string> set_;
 };
 
-void customOperatorExample() {
+void customFunctionExample() {
     s2e2::Evaluator evaluator;
 
     evaluator.addStandardFunctions();

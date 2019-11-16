@@ -10,7 +10,7 @@ namespace s2e2
 {
     /**
      * @class ITokenizer
-     * @brief Interface class for splitting expression string onto list of tokens.
+     * @brief Interface class for splitting expression string into list of tokens.
      */
     class ITokenizer
     {
